@@ -1,0 +1,17 @@
+Método Búsqueda Uniforme 
+z = 0.25; x = 1.6; x1 = x + z; y1 = F2(x1)
+
+Método Búsqueda Acelerada 
+z = 0.15; x = 1.6; z1 = 2 * z; x1 = x + z; y1 = F2(x1); y = F2(x)
+
+Método de bisección
+a = 2.1; b = 2.6; z = 0.005; x1 = ((a + b)/2) - (z/2); x2 = ((a + b)/2) + (z/2); y1 = F2(x1); y2 = F2(x2)
+
+Método de sección de oro
+a = 2.1; b = 2.6; z = 0.5; x1 = a + (r * z); x2 = b - (r * z); y1 = F2(x1); y2 = F2(x2)
+
+Método de runge kutta RK-4
+y1 = 0; x1 = 0; a = 0; b = 2; m = 4; h = ((b - a)/m); k1 = h * F(x1, y1); k2 = h * F(x1 + (h/2), y1 + (k1/2)); k3 = h * F(x1 + (h/2), y1 + (k2/2)); k4 = h * F(x1 + h, y1 + k3); x2 = x1 + h; y2 = y1 + ((k1 + 2 * k2 + 2 * k3 + k4)/6)
+
+Método de runge kutta RK-2
+y1 = 0; x1 = 0; b = 2; a = 0; m = 4; x2 = x1 + h; h = ((b - a)/m); k1 = h * F(x1, y1); k2 = h * F(x1 + h, y1 + k1); y2 = y1 + ((k1 + k2)/2)
